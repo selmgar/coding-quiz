@@ -28,8 +28,11 @@ jobs:
       - name: Install Dependencies
         run: npm install
 
+      - name: Start application
+        run: npm start
+
       - name: Run Cypress Tests
         uses: cypress-io/github-action@v4
         with:
           browser: electron
-          command: npm run test-component
+          command: npm run test
